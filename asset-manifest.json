@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ganesh292/ToDoListApp/static/css/main.10465eb6.chunk.css",
+    "main.js": "/ganesh292/ToDoListApp/static/js/main.cdfebf2f.chunk.js",
+    "main.js.map": "/ganesh292/ToDoListApp/static/js/main.cdfebf2f.chunk.js.map",
+    "runtime~main.js": "/ganesh292/ToDoListApp/static/js/runtime~main.d660b193.js",
+    "runtime~main.js.map": "/ganesh292/ToDoListApp/static/js/runtime~main.d660b193.js.map",
+    "static/js/2.7cddf10a.chunk.js": "/ganesh292/ToDoListApp/static/js/2.7cddf10a.chunk.js",
+    "static/js/2.7cddf10a.chunk.js.map": "/ganesh292/ToDoListApp/static/js/2.7cddf10a.chunk.js.map",
+    "index.html": "/ganesh292/ToDoListApp/index.html",
+    "precache-manifest.61eb90876e146ca4ebb0f1d66934564f.js": "/ganesh292/ToDoListApp/precache-manifest.61eb90876e146ca4ebb0f1d66934564f.js",
+    "service-worker.js": "/ganesh292/ToDoListApp/service-worker.js",
+    "static/css/main.10465eb6.chunk.css.map": "/ganesh292/ToDoListApp/static/css/main.10465eb6.chunk.css.map"
+  }
+}
