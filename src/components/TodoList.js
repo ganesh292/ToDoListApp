@@ -6,32 +6,31 @@ class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+      items: [],
+      value: ''
     };
    
  
     this.addItem = this.addItem.bind(this);
   }
-   
+  
+  onInputChange = value => this.setState({ value })
+
   addItem(e) {
-    if (this._inputElement.value !== "") {
-      var newItem = {
-        text: this._inputElement.value,
-        key: Date.now()
-      };
-   
-      this.setState((prevState) => {
-        return { 
-          items: prevState.items.concat(newItem) 
-        };
-      });
-     
-      this._inputElement.value = "";
+    e.preventDefault()
+
+    const newItem = {
+      text: this.state.value,
+      key: Date.now()
     }
-     
-    console.log(this.state.items);
-       
-    e.preventDefault();
+  
+    this.setState(prevState => ({
+      items: [
+        ...prevState.items,
+        newItem
+      ],
+      value: ''
+    }))
   }
 
   render() {
@@ -39,10 +38,11 @@ class TodoList extends Component {
       <div className="todoListMain">
         <div className="header">
         <form onSubmit={this.addItem}>
-          <input ref={(a) => this._inputElement = a} 
-             placeholder="enter task">
-            </input>
-            <button type="submit">add</button>
+          <input value={this.state.value} 
+            onChange={this.onInputChange} 
+            placeholder="Enter Task" 
+            required/>
+          <button type="submit">add</button>
           </form>
         </div>
         <TodoItems entries={this.state.items}/>

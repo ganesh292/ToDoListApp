@@ -1,13 +1,12 @@
-import React, { Component } from "react";
- 
-class TodoItems extends Component {
-  createTasks(item) {
+import React from "react";
+
+
+const TodoItems = (props) => {
+  
+  const createTasks  = (item) => {
     return <li key={item.key}>{item.text}</li>
   }
- 
-  render() {
-    var todoEntries = this.props.entries;
-    var listItems = todoEntries.map(this.createTasks);
+  let listItems = props.entries.map(createTasks);
  
     return (
       <ul className="theList">
@@ -15,6 +14,5 @@ class TodoItems extends Component {
       </ul>
     );
   }
-};
  
 export default TodoItems;
