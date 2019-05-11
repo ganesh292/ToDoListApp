@@ -13,8 +13,10 @@ class TodoList extends Component {
  
     this.addItem = this.addItem.bind(this);
   }
-  
-  onInputChange = value => this.setState({ value })
+
+  onInputChange = e => {
+    this.setState({ value: e.target.value })
+  }
 
   addItem(e) {
     e.preventDefault()
